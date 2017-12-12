@@ -1,0 +1,91 @@
+<!DOCTYPE html> {% load staticfiles %}
+
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Class Bingo</title>    
+  <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+
+<body>
+    {% csrf_token %}
+  <img class="background-classroom" src="https://www.freeindex.co.uk/media/listingpics/161/168/140930_class2500x1250_resize.jpg"
+  />
+  <img class="background-bingo" src="https://cdn-1.us.xmsymphony.com/fe47e3b9ebbe764b51d04bea1191b312/contents/ckfinder/images/headers/BINGO_HEADER.jpg"
+  />
+  <div id="checkout-classes">
+      <h1> Checkout Infotmation </h1>
+      <p>Classes chosen: {{ selectedClass.course_name }} </p>
+      <p> Subtotal: {{selectedClass.price}} </p>
+    </div>
+  <form method="post">
+      {% csrf_token %}
+  <div id="checkout-container">
+    <div id="checkout-address">
+      <h1>Billing Address</h1>
+      <label>First Name: </label>
+      <input class="checkout-form" name="fname" type="text" /> <br>
+      <label>Last Name: </label>
+      <input class="checkout-form" name="lname" type="text" /><br>
+      <label>Street: </label>
+      <input class="checkout-form" name="street" type="text" /> <br>
+      <label>City:</label>
+      <input class="checkout-form" name="city" type="text" /> <br>
+      <label>Country: </label>
+      <input class="checkout-form" name="country" type="text" /> <br>
+      <label>Zip Code:</label>
+      <input class="checkout-form" name="zipcode" type="text" /> <br>
+    </div>
+    <div id="checkout-payment">
+      <h1> Payment Information </h1>
+      <h3>SubTotal: </h3>
+      <label>Card Type:</label>
+      <select id="CreditCardType" name="CreditCardType" class="checkout-form">
+        <option value="Visa">Visa</option>
+        <option value="MasterCard">MasterCard</option>
+        <option value="AmericanExpress">American Express</option>
+        <option value="Discover">Discover</option>
+      </select> <br>
+
+      <label>Card Number:</label>
+      <input class="checkout-form" name="cardNum" type="text" /> <br>
+      <label>Card CVV:</label>
+      <input class="checkout-form" name="cvv" type="text" /> <br>
+      <label>Expiration Date</label>
+      <select class="checkout-form" name="month">
+        <option value="ph">Month</option>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      <select name="year">
+        <option value="ph">Year</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+      </select>
+    </div>
+  </div>
+  <input class="checkout-confirm-btn" type="submit" value="Confirm">
+  </form>
+</body>
+
+</html>

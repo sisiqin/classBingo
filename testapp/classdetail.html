@@ -1,0 +1,35 @@
+<html>
+  {% load static %}
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Class Bingo</title>    
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+  </head>
+  <body>
+    <div class="detail-title">
+      <img class="background-classroom" 
+      src="https://www.freeindex.co.uk/media/listingpics/161/168/140930_class2500x1250_resize.jpg" />
+      <img class="background-bingo"
+      src="https://cdn-1.us.xmsymphony.com/fe47e3b9ebbe764b51d04bea1191b312/contents/ckfinder/images/headers/BINGO_HEADER.jpg" />
+      <p id="detail-courseintro">Courses Introduction</p>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+    <div class="detail-classes">
+        {% for course in course_set %}
+        <div class="detail-each-class">
+          <h1 class="detail-one-course" > Course Name: {{course.course_name }}</h1>
+          <p class="detail-one-course" > Description: {{course.description}}</p>
+          <p class="detail-one-course" > Start Date: {{course.start_date}}</p>
+          <p class="detail-one-course" > End Date: {{course.end_date}}</p>
+          <p class="detail-one-course" > Price: {{course.price}}</p>
+          <p class="detail-one-course" > Instructor: {{ course.instructor_id.first_name }} {{ course.instructor_id.last_name}}</p>
+          <label class="detail-one-course" > Select this class: </label>
+          <input class="detail-one-course" type="checkbox" name="selectedClass" value={{course.id}}>
+        </div>
+        {%endfor %}
+      </div>
+      <input class="detail-checkout-btn" type="submit" value="Check out">
+    </form>
+  </body>
+</html>

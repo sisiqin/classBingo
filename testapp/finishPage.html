@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Class Bingo</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+
+<body>
+    <div class="finish-container">
+            <h1 class="finish-greet">Bingo! </h1>
+        <h1 class="finish-greet">Thank you for shopping with us! </h1>
+        <h2 class="finish-greet"> Display following infomation when check in to the class </h2>
+        <div class="finish-display">
+            <p> Conformation ID: {{ comId }} </p>
+            <p> Student Name: {{ stdName }} </p>
+            <p> Course Name: {{ course.course_name }} </p>
+            <p> Start Date: {{ course.start_date }} </p>
+            <p> End Date: {{ course.end_date }} </p>
+            <p> Instructor: {{ course.instructor_id.first_name }} {{ course.instructor_id.last_name}} </p>
+            <p> Price: {{ course.price }} </p>
+        </div>
+    </div>
+</body>
+
+</html>

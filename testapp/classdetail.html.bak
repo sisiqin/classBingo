@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Socialmedia</title>
+    <link rel="stylesheet" type="text/css" href="addition.css">
+  </head>
+  <body style="    background-color: #ffe3e3;" vlink="#0000FF">
+    <table align="center" height="1100" width="1100" cellspacing="20" cellpadding="10"
+      border="0">
+      <tbody>
+        <tr height="380">
+          <td colspan="2">
+            <div style="position:relative;"> <img src="classroom.jpg" height="380"
+                width="1100">
+              <div style="position: absolute; top: 137px; left: 453px; z-index: 8;"><img
+                  src="bingo.jpg" height="70" width="150"></div>
+              <div style="position: absolute; z-index: 2; left: 308px; top: 274px;"><p2
+                  style="font-family:Verdana,Arial,Helvetica; font-size:300%; color:White">
+                  Courses Introduction</p2></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td width="400" bgcolor="#FFFBDD"> <p1 style="position:relative;left:10;top:10">
+              <h1 class="style">HTML and CSS Class</h1>
+              <h1 class="style"> Throughout this course, you'll learn about the
+                underlying structure of the web - HTML. You'll learn how to use
+                this tree-like structure to create websites. You'll also learn
+                how to apply styling to a website through CSS. You'll learn
+                about CSS syntax, selectors, and units. Along the way, you'll
+                also learn about code editors and a browser's Developer Tools.
+                things here</h1>
+              <br>
+              <ul>
+                <img src="HTML.jpg" height="100" width="400">
+              </ul>
+              <br>
+              <ul>
+                <li class="reference"><a href="https://www.youtube.com/watch?v=3cXttc6LiO0&amp;t=125s"
+                    target="_black">Click here to watch my nyc life through my
+                    weekend vlog</a></li>
+              </ul>
+            </p1></td>
+          <td width="400" bgcolor="#FFFBDD"> <p1 style="position:relative;left:10;top:10">
+              <h1 class="style">Fundamental Prograsmming:Python</h1>
+              <h1 class="style">In this course, you will learn how to Start
+                coding in the programming language Python; Reuse and share code
+                with Object-Oriented Programming; Create and share amazing,
+                life-hacking projects!</h1>
+              <br>
+              <ul>
+                <img src="python.jpg" style="width: 411px; height: 102px;">
+              </ul>
+              <br>
+              <ul>
+                <li class="reference"><a href="https://www.youtube.com/watch?v=e-RVw3Fap4g"
+                    target="_black">Click here to watch Yushuang's travel vlog</a></li>
+              </ul>
+            </p1> </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

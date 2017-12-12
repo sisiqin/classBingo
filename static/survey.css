@@ -1,0 +1,31 @@
+body {
+	font-size:15px;
+	font-family:Tahoma;
+    color:forestgreen
+}
+.demograph {
+    background-color:azure;
+    border:2px;
+    border-color:black;
+    border-style: ridge;
+    width:50%
+}
+        
+
+h1 {
+    text-indent:1%;
+    color: blue;
+}
+
+h2 {
+    text-indent:5%;
+    color: blue;
+}
+
+.textchoice {
+	text-indent: 25%;
+}
+        
+.radchoice {
+    text-indent: 45%;
+}
